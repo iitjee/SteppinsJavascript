@@ -11,7 +11,9 @@ var socialMedia = {
 
 var socialList = function() {
   var  output = '<ul>', 
-    myList = document.querySelectorAll('.socialmediaicons');
+    myList = document.querySelectorAll('.socialmediaicons'); //this queries for all those having class named 'socialmediaicons'
+  //in html we've <nav class="socialmediaicons"></nav>
+
 
   for (var key in arguments[0]) {
     output+= '<li><a href="' + socialMedia[key] + '">' +
@@ -21,7 +23,7 @@ var socialList = function() {
   output+= '</ul>';
   
   for (var i = myList.length - 1; i >= 0; i--) {
-    myList[i].innerHTML = output;
+    myList[i].innerHTML = output; //important. embedding the html content into ALL the myList classed elements
   };
 }(socialMedia); //note that this is a self-calling function. i.e it's called the moment this is defined
 
