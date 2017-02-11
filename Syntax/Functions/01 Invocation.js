@@ -40,13 +40,13 @@ When a function's not the property of an object, then it's invoked as a function
       secondDog.breed = "Poodle"
 
 //Expanding functionality through prototype
-we saw how we can create our own objects using functions. The functions themselves become a constructor. 
-What if we wanted to expand the functionality of a constructor by adding say a method. We can do that through
-that constructor's prototype object.
+// we saw how we can create our own objects using functions. The functions themselves become a constructor. 
+// What if we wanted to expand the functionality of a constructor by adding say a method. We can do that through
+// that constructor's prototype object.
 
-JavaScript is known as a prototypal inheritance language. That means that you can base the functionality of an object
-on another object. Not every object can be based on another object, and as a matter of fact, every object in JavaScript
-is based on a different object.
+// JavaScript is known as a prototypal inheritance language. That means that you can base the functionality of an object
+// on another object. Not every object can be based on another object, and as a matter of fact, every object in JavaScript
+// is based on a different object.
 
 
 var Dog = function() {
@@ -84,12 +84,16 @@ firstDog.breed = "Doberman";
     firstCat.breed = "Manx";
     firstCat.speak('meow');
     
+//So the cool thing about this is that multiple objects can inherit the same functionality.  
     
     
     
-    
-    
-    
-  
+  /*
+  Now one interesting thing about JavaScript is that all objects inherit properties. And as a matter of fact, any
+  instances or any functions that we create as function declarations inherit from the function object. And function 
+  itself is a constructor and it also inherits from object. 
+  console.dir(speak);
+  it's given as function but if you expand in console, u'll notice it's prototype i.e inherited from object
+  */
   
   
