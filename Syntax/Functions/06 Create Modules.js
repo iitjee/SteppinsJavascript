@@ -72,7 +72,7 @@ ray.speak() //you called without argument => ERROR!!
               var myArguments = arguments[0] || '';
               var statement = myArguments.say || DEFAULTS.say;
               console.log(statement);
-              return this;
+              return this; //why do we do thi? see explanation below
             },
             run : function() {
               var myArguments = arguments[0] || '';
@@ -85,4 +85,13 @@ ray.speak() //you called without argument => ERROR!!
 //calling
 ray.speak({ say: 'howdy' }).run().speak({ say: 'run faster' }).run({speed: 'faster'});
 
+/*IMPORTANT: So why is this working? This is a little sort of weird. If you don't get what's going on. And the reason is, that this 
+parameter is going to return the instance of the object. So in other words, this is going to return the ray object, once
+again. Normally, return exits the current function. So, if I was out of this function. I wouldn't have the object that I
+needed to run the next method. But since I'm returning this, the last thing that the speak function will do is return the 
+object itself.
 
+And so therefore now, I have access back again to either my speak, or my run function. This technique is going to make your
+code just a little bit easier to call. And it makes it sort of fun to use. I've seen it used in libraries like D3 and jQuery.
+It doesn't take that much effort to set it up.
+*/
