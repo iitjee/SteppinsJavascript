@@ -19,6 +19,12 @@ var joinedString = fruits.join("--"); //joiner is --    to use spl chars, escape
 var sortedArray  = myArr.sort()
 
 
+//arrays are assigned by reference
+const foo = [1, 2];
+const bar = foo;
+
+bar[0] = 9;
+console.log(foo[0], bar[0]); // => 9, 9
 
 
 
