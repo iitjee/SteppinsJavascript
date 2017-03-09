@@ -3,7 +3,7 @@
 With Call and Apply, you can define the value of the this argument. Now if you remember from traditional function
 declarations, one of the problems I mentioned is that the this parameter is bound to the global object.
 
-unclear: https://www.lynda.com/JavaScript-tutorials/Understanding-call-apply-invocation/148137/158397-4.html
+unclear: 'Understanding-call-apply-invocation/148137/158397-4'
 
 
 
