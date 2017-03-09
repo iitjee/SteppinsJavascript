@@ -97,3 +97,10 @@ firstDog.breed = "Doberman";
   */
   
   
+
+function Cat(name, color) {
+    this.name = name;
+    this.color = color;
+}
+var myCat = new Cat('Fluffy', 'White');
+
