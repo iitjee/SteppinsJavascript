@@ -6,6 +6,28 @@
 
 
 
+/*  Using Object.create() to create JS objects  */
+var cat = Object.create(Object.prototype,
+{
+    name: {
+        value: 'Fluffy',
+        enumerable: true,
+        writable: true,
+        configurable: true
+    },
+    color: {
+        value: 'White',
+        enumerable: true,
+        writable: true,
+        configurable: true
+    }
+});
+//you don't need to mention true separately as they are the default values anyway! :)
+    
+
+
+
+
 /*  Property Descriptors  */
 
     var cat = {
