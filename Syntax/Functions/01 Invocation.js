@@ -39,6 +39,9 @@ When a function's not the property of an object, then it's invoked as a function
       secondDog.name = "Fluffy";
       secondDog.breed = "Poodle"
 
+//note: you can use function Dog() {...} this syntax also instead of function expressions
+
+
 //Expanding functionality through prototype
 // we saw how we can create our own objects using functions. The functions themselves become a constructor. 
 // What if we wanted to expand the functionality of a constructor by adding say a method. We can do that through
