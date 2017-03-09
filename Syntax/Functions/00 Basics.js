@@ -36,9 +36,10 @@ var plus = function(a, b) {
   
   * Every function receives `this` and `arguments` parameters
   * For methods: `this` is tied to the class instance it belongs to
-  * For functions: `this` is tied to the global object. (in webbrowser, that global object is teh window object)
+  * For functions: `this` is tied to the global object. (in webbrowser, that global object is teh window object i.e this.myprp == window.myprp)
   (methods that are not defined in class are functions. asat!)
   
+
   
   With traditional invocation the this parameter gets a copy of the global object. 
   And that can be a little bit weird, bad, and create some problems. 
