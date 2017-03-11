@@ -7,6 +7,7 @@ There are four ways to create objects:
 4. ES6 Classes
 
 
+//es6 way
 class Cat {
   constructor(name, color) {
     this.name = name;
