@@ -14,7 +14,13 @@
   
   
   
-  
+  MyFunc: function() {
+    ...
+  }
+  is same as 
+  MyFunc() {
+    ...
+  }
 
 
 
