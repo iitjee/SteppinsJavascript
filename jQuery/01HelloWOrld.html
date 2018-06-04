@@ -30,3 +30,11 @@
         <!-- we start with an empty document -->
     </div>
 </body>
+
+The ready function sets up an event listener for when the DOM structure of the page is fully parsed by the browser, and is 
+ready to be operated on. Now, this is different from the onload event, which you might be used to using, because onload 
+fires only after all of the page content, including images, have been loaded.
+
+Now obviously, depending on how many images you have, and how big they are, that can take a while. The ready event allows us 
+to operate on the page much earlier than the load event does. So, I pass a callback function to the ready function, and this 
+callback function is the event handler that will be fired when the ready event is triggered. 
