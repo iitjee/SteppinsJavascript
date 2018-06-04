@@ -10,7 +10,9 @@ function f() {
 
 var g = f();
 g(); // returns '11'
-In this above example, g captured the variable a declared in f. At any point that g gets called, the value of a will be tied to the value of a in f. Even if g is called once f is done running, it will be able to access and modify a.
+In this above example, g captured the variable a declared in f. At any point that g gets called, the 
+value of a will be tied to the value of a in f. Even if g is called once f is done running, it will be able 
+to access and modify a.
 
 function f() {
     var a = 1;
