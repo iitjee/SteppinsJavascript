@@ -1,0 +1,74 @@
+JavaScript normally runs code sequentially, which means in the order that the browser reads it from your file, but we can write 
+JavaScript code that will run only when something happens in the browser. That's because browsers can trigger events, when things happen 
+to elements on your page. JavaScript events can happen at any time. For example, when the page loads in a browser, when the user moves 
+the mouse over a link, when a video has finished loading, or when a form is submitted.
+
+All those things are events, so if you want to take care of a task when something happens. You have to capture that event, and that's 
+done through a process called event registration. This means telling the browser that you want to do something when an event takes 
+place, and there's several ways of doing that. Some are more compatible with older browsers than others. So the first way of doing this 
+is by using tag attributes, and this works pretty simply. If we take a look at this page right here and we take a look at the code for 
+it right here.
+
+You can simply add a handler to any of these images right here, which are just rectangles of different colours, and create an event 
+handler for that event. So we can use, say, an onclick event handler, and ask the browser to give us an alert when somebody pushes this 
+button. So we could say alert, and then. We'll say push pink, and I'm going to save that and go to my browser. And then I'll refresh and 
+if I click this pink icon, we'll get a little alert that says, push pink.
+
+Now this is considered extremely bad practice, because it makes your code hard to update. It's much better to place the JavaScript 
+outside the html tags, so you can also check for events by attaching them to a specific element. Using that notation in your JavaScript 
+code. It means that you first specify which element in the dome you want to get to, and then specify which event you want to track. When 
+that event happens to that element, your code will execute so let's see how that works. Essentially look at this page right here once 
+again, and we are going to modify the code, we're going to take this bad JavaScript code out of here, and we're going to add this within 
+some script tax.
+
+So I'm going to put this on the bottom. I'll use a script tag right here, and then I can ask the document to get a specific element in 
+my DOM. Now the easiest way to do that is to add an ID to one of these elements, and then use a DOM selection method. So I'll say 
+document. Get element by ID and then we can ask for the ID that we want, so in this case we are going to ask for the element called 
+pink. And then we can give it an on click event handler that executes a function literal, and the function literal just means a function 
+without a name and then we just ask it to do something when that event happens.
+
+
+<script>
+  document.getElementById("mybutton").onclick = function() {
+  
+  ...
+  
+  }
+</script>
+
+
+
+So it gets here alert We'll put in here clicked on pink. Save that, back to our page, refresh our browser, and this same thing should 
+happen now when you click on the same button. The more modern way of handling events is to use a special method called addEventListener. 
+You can use this method on any element in your page. And at first glance it can look a lot like the dot notation method, because it asks 
+for the type of event, a function and a third true or false value called the propagation type.
+
+We'll talk about propagation more later. However, this way of handling events is super powerful. So let's take a look at how you do 
+that. Back into our code. So, instead of doing this right here, we're going to get the element and instead of doing an on-click event 
+handler, we're going to use a function called addEventListener, and then we'll pass it along the type of even we want. So, in this case 
+we'll ask for a click, and then we'll execute a function literal, just like we did before. But then after that, right over here we'll 
+also pass in a value of false.
+
+
+<script>
+  document.getElementById("mybutton").addEventListener("click", function() {
+  
+  ...
+  
+  }, false);
+</script>
+
+
+And let me go ahead and save that, go back into our page, refresh it, and click on this again. You'll see that we get the same thing. So 
+they look very similar, so what's the big deal about addEventListener? Well the huge advantage to using this way of dealing with events, 
+is that it allows you to check for multiple events within a single call. This is known as event propagation, and we'll talk more about 
+that in a different movie. The other less common advantage is that events can be triggered by non-dom elements, which means that with 
+that method you can write your own event.
+
+
+And different parts of your code can listen for those events that you've created yourself, and then you can execute pieces of code based 
+on that. Now one disadvantage to addEventListener is that it's not supported by IE8 and older browsers. Now they do support a separate 
+attach event method. So if you have to support older browsers, things get a little bit trickier. So the best way to handle events, is 
+always going to be addEventListener. So we'll be emphasizing that in this course. Events are a foundational part of JavaScript, so 
+understanding how to trigger them is going to help you develop better web applications.
+
