@@ -13,6 +13,12 @@ var segment = myPhrase.slice(6, 11) //cutting(slicing) into substring starting f
 .substring(start, end)
 .substr(start, end)
 
+//check for substring
+mainstring.includes(substring) //returns true or false
+
+//remove substring
+var ret = "data-123".replace('data-','');
+
 /*   String comparison */
 //sorting order: ABC...XYZabcd...xyz (increasing order i.e least is A)
  
