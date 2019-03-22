@@ -1,40 +1,34 @@
-<head>
-    <title>First jQuery-Enabled Page</title>
-    <link rel="stylesheet" href="../style.css" />
+#lesson1.1 jQuery EsseTrain
 
+/* NEW JQUERY METHOD */
     <!-- insert the script to reference jQuery here -->
     <script type="text/javascript" src="../jquery-3.0.0.js"></script>
 
-    <!-- insert the script to display the Hello World message here -->
     <script type="text/javascript">
-        // Inserting content using jQuery
-        $("document").ready(function() {
+        $("document").ready(function() { //callback function
             $("#content").append("<p>The page just loaded.</p>");
         });
 
 
-        // Inserting content the old way using the DOM
-        window.addEventListener("DOMContentLoaded", function(evt) {
-            var elem = document.getElementById("content");
-            var para = document.createElement("p");
-            var text = document.createTextNode("The page just loaded.");
-            para.appendChild(text);
-            elem.appendChild(para);
-        });
-    </script>
-</head>
+/* OLD METHOD */
+// Inserting content the old way using the DOM
+window.addEventListener("DOMContentLoaded", function(evt) {
+    var elem = document.getElementById("content");
+    var para = document.createElement("p");
+    var text = document.createTextNode("The page just loaded.");
+    para.appendChild(text);
+    elem.appendChild(para);
+});
 
-<body>
-    <h1>First jQuery Page</h1>
-    <div id="content">
-        <!-- we start with an empty document -->
-    </div>
-</body>
-
+        Im calling the jQuery library, which is referenced by this dollar sign right here. 
+        
+        And Im using the "document" keyword, which 
+        indicates that we're about to perform an operation on the page itself. 
+        
 The ready function sets up an event listener for when the DOM structure of the page is fully parsed by the browser, and is 
 ready to be operated on. Now, this is different from the onload event, which you might be used to using, because onload 
 fires only after all of the page content, including images, have been loaded.
 
 Now obviously, depending on how many images you have, and how big they are, that can take a while. The ready event allows us 
-to operate on the page much earlier than the load event does. So, I pass a callback function to the ready function, and this 
+to operate on the page much earlier than the load event does. So, I pass a CALLBACK function to the ready function, and this 
 callback function is the event handler that will be fired when the ready event is triggered. 
