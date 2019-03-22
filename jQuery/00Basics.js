@@ -1,4 +1,4 @@
-If you look at the state of modern web-app development, several common patterns and scenarios start to emerge. Let's take a 
+If you look at the state of modern web-app development, several common patterns and scenarios start to emerge. Lets take a 
 look at a few of those. One common pattern is that when the page loads, you have to perform some kind of state initialization, 
 like maybe setting up a product list. Then you set up some event-handlers, and you kick off the application. 
 
@@ -12,7 +12,7 @@ obviously there are more patterns than these three, but these are really good ex
 much easier to build. JQuery leverages many of the skills you already have as a web developer.
 
 For example, it uses CSS syntax to find and retrieve page content. It also uses JavaScript syntax, but is designed from the 
-ground, up to work on sets of elements, not just individual ones. And you run into this all the time when you're building 
+ground, up to work on sets of elements, not just individual ones. And you run into this all the time when youre building 
 complex web apps. JQuery also uses a concept called statement chaining to reduce the amount of code you'll have to write, and 
 we'll see that as we get into the course. JQuery is also highly extensible. There are a lot of plugins available for almost 
 every web development need you might have.
