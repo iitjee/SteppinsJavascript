@@ -15,7 +15,7 @@ https://www.lynda.com/JavaScript-tutorials/browser-Babel-transpiling/424003/4591
 
 Webpack Transpiling:
 The solutions for transpiling so far have been useful, but a little bit too manual. For a larger scale project, most people 
-like to use a build tool to help automated processes like transpiling, sass conversion and more. Let's take a look at one of 
+like to use a build tool to help automated processes like transpiling, sass conversion and more. Lets take a look at one of 
 these build tools, webpack. Webpack is a build tool that helps us load all of our dependencies, CSS, images, node modules and 
 more, and babel and webpack work really well together, and can help automate the process of performing these conversions.
 
