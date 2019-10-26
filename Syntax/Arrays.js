@@ -10,7 +10,7 @@ myArr[2] = 3;
 METHODS:
 --------
   myArr.push(myNewEl);
-  
+ myArr.slice(-1)[0]; //gives last element
 
   
 var reverseArray = myArr.reverse()
@@ -19,7 +19,7 @@ var joinedString = fruits.join("--"); //joiner is --    to use spl chars, escape
 var sortedArray  = myArr.sort()
 
 
-//arrays are assigned by reference
+//arrays are assigned by reference, so be careful!!
 const foo = [1, 2];
 const bar = foo;
 
