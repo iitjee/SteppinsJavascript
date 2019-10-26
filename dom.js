@@ -10,3 +10,11 @@ supports a mapping function as the second argument).
 
 
 
+
+
+
+//array 
+tempor1 = tempor1.slice(-1)[0] //gives lastELement
+
+
+
