@@ -3,11 +3,15 @@
 /* NEW JQUERY METHOD */
     <!-- insert the script to reference jQuery here -->
     <script type="text/javascript" src="../jquery-3.0.0.js"></script>
-
     <script type="text/javascript">
         $("document").ready(function() { //callback function
-            $("#content").append("<p>The page just loaded.</p>");
+            $("#contenttt").append("<p>The page just loaded.</p>");
         });
+    </script> 
+
+//in body tag
+    <div id="contenttt"> this is jquery testing</div>
+      
 
 
 /* OLD METHOD */
@@ -20,11 +24,12 @@ window.addEventListener("DOMContentLoaded", function(evt) {
     elem.appendChild(para);
 });
 
-        Im calling the jQuery library, which is referenced by this dollar sign right here. 
+        $ ----- represents the jQuery library 
         
         And Im using the "document" keyword, which 
         indicates that were about to perform an operation on the page itself. 
-        
+      
+jQuery's ready() vs nativeHTML's onload
 The ready function sets up an event listener for when the DOM structure of the page is fully parsed by the browser, and is 
 ready to be operated on. Now, this is different from the onload event, which you might be used to using, because onload 
 fires only after all of the page content, including images, have been loaded.
