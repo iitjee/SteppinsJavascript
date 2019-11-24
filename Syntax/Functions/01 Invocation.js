@@ -30,6 +30,8 @@ When a function's not the property of an object, then it's invoked as a function
           var name, breed;
           return console.dir(this);
         }
+//if you use console.log you'll get "Dog[]" you can't see the properties inside them        
+
 
       firstDog = new Dog; //new creates a new instance of the object
       firstDog.name = "Rover";
