@@ -77,6 +77,7 @@ firstDog.breed = "Doberman";
     }
 
     Dog.prototype.speak = speak; //So what that does, is give the dog the ability to speak, or the method called speak.
+//like, if you want to add new properties to an already defined class somewhere, prototype can be used!! xD
     Cat.prototype.speak = speak;
 
     firstDog = new Dog;
