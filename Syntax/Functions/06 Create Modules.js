@@ -57,7 +57,7 @@ ray.speak() //you called without argument => ERROR!!
 }
 // It's a good idea to set up defaults for your modules at the top of your objects. 
 //They're going to be easier to find there, and can make your methods useful even if someone forgets to set them.
-
+//or the user wants to set only a part of the entire set of arguments
 
 
 //Chaining Module method calls         
@@ -94,4 +94,7 @@ object itself.
 And so therefore now, I have access back again to either my speak, or my run function. This technique is going to make your
 code just a little bit easier to call. And it makes it sort of fun to use. I've seen it used in libraries like D3 and jQuery.
 It doesn't take that much effort to set it up.
+
+
+AWESOME!!!!!!!!! 
 */
