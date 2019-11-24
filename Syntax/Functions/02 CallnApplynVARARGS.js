@@ -11,8 +11,8 @@ declarations, one of the problems I mentioned is that the this parameter is boun
 myFn.call(....)
 myFn.apply(....)
 
-a function as you know is not just name and some executing code.
-in js, when you create a function, it also has three more "sub functions" --- call(), apply(), bind()
+// a function as you know is not just name and some executing code.
+// in js, when you create a function, it also has three more "sub functions" --- call(), apply(), bind()
 
 ----> https://medium.com/@omergoldberg/javascript-call-apply-and-bind-e5c27301f7bb
 
@@ -31,6 +31,11 @@ var plus = function() {
   }
 console.log(plus(1, 3, 5,2, 4, 9))
 
+
+
+//So if you see a function declaration with no parameters at all but with parameters when the function is invoked
+//don't panic! it means in the function body, "arguments" keyword is used 
+//which means it IS a function UTILIZING arguments
 
 /*  Return values */
 Return sends something back to the "caller"(function call)
