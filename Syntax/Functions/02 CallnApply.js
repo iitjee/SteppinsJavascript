@@ -16,12 +16,12 @@ in js, when you create a function, it also has three more "sub functions" --- ca
 
 ----> https://medium.com/@omergoldberg/javascript-call-apply-and-bind-e5c27301f7bb
 
-/* varargs: */
-//we will use the 'arguments' parameter
+/* variable arguments:-- varargs */
+//we will use the 'arguments' parameter (it's default) (no need to put in function header)
 * arguments[4]
 * arguments.length
 * we can loop through arguments
-* we can't use all array methods
+* we can't use all array methods on 'arguments' array (like pop(), push() )
 
 
 var plus = function() {
@@ -29,8 +29,11 @@ var plus = function() {
   for(var i=0; i<arguments.length; ++i) sum+=arguments[i];
   return sum
   }
+console.log(plus(1, 3, 5,2, 4, 9))
+
 
 /*  Return values */
+Return sends something back to the "caller"(function call)
 if return is not used in the function, it'll return 'undefined'
 
 
