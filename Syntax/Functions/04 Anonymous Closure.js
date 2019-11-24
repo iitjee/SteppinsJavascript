@@ -16,7 +16,7 @@ var iKnow = function  (){
   console.log("hi");
   }()
 //now this has become an anonymous function
-//however, you require 'kung' if you are doing something recursive
+//****************however, you require 'kung' if you are doing something RECURSIVE****************
 
 //You can even remove the variable declaration
 (function() {
