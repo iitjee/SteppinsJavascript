@@ -6,7 +6,7 @@ it's going to return a new promise.
 
 
 const delay = seconds => {
-  return new Promise(resolve)
+  return new Promise(resolve........bodyStillThere....)
 }
 
  Now, this new promise is going to take in a very important argument, which is resolve. 
@@ -47,3 +47,14 @@ in this case is resolve and then the amount of timeout
 
   delay(1).then(msgString => console.log(msgString));
   delay(3).then(msgString => console.log(msgString))
+
+
+
+
+			delay(2).then(msg => msg.toUpperCase())
+				.then(msg => `${msg}!!!!!!`)
+				.then(msg => console.log(msg));
+
+The then function is going to act kind of like an assembly line, where we're transforming our data in different stages. Everything has 
+been going really well so far. All of our promises are resolving. But what happens when there's some sort of an error? Maybe our data 
+doesn't load or something else goes wrong.
