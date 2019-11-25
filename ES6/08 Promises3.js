@@ -5,7 +5,10 @@
 resolve(value) — if the job finished successfully, with result value.
 reject(error) — if an error occurred, error is the error object.
   */
-  
+
+
+// we have a sequence of asynchronous tasks to be done one after another. For instance, loading scripts. How can we code it well?
+//PROMISE CHAINING
   
   
   const delay = seconds => {
@@ -28,4 +31,26 @@ reject(error) — if an error occurred, error is the error object.
 				.then(msg => `${msg}!!!!!!`)
 				.then(msg => console.log(msg));		
 		
+
+
+new Promise(function(resolve, reject) {
+
+  setTimeout(() => resolve(1), 1000); // (*)
+
+}).then(function(result) { // (**)
+
+  alert(result); // 1
+  return result * 2;
+
+}).then(function(result) { // (***)
+
+  alert(result); // 2
+  return result * 2;
+
+}).then(function(result) {
+
+  alert(result); // 4
+  return result * 2;
+
+});
 
