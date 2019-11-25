@@ -14,41 +14,58 @@ const delay = seconds => {
 And in this case, we're going to set a timeout here
 
 
+ const delay = seconds => {
+  return new Promise(function(resolve) {//'reject' argument is omitted. function(resolve, reject)
+      setTimeout(resolve, seconds*1000) 
+  });
+}
 
+/*
+setTimeout is going to take in two things:
+-  a callback function
+-  amount of timeout
+*/
 
+//es6 way
  const delay = seconds => {
   return new Promise(resolve => {
       setTimeout(resolve, seconds*1000)
   });
 }
 
-		console.log("zero seconds");
+	
         delay(1).then(() => console.log("1 second"));
-        delay(3).then(() => console.log('3 seconds'))
+/* what happens?
+- delay function is called and it returns a promise
+- new Promise => immediately the executor(body) begins to run
+- after a delay of 1000, setTimeout's callback which is resolve() is invoked
+- as it's invoked, the promiseObject's state property goes from "pending" to "fulfilled"
+- note that we called resolve without any argument => no "value" to pass to then() function
+- not surprisingly, then therefore doesn't have any arguments now
+*/
 
-setTimeout is going to obviously take in two things: it's going to take in a callback function, which 
-in this case is resolve and then the amount of timeout
+/*
+(When the executor obtains the result, be it soon or late – doesn’t matter, it should call one of these callbacks:
 
- Then() is going to fire after the promise resolves. So here we're going to pass in a callback functio
+resolve(value) — if the job finished successfully, with result value.
+reject(error) — if an error occurred, error is the error object.)
+*/
 
  Now instead of just passing in resolve,  I'm going to pass in an actual callback that is going to return resolve
 
  
  const delay = seconds => {
-  return new Promise(resolve => {
-      setTimeout(() => resolve(`${seconds} delay here!! yay!!`)), 
-      seconds*1000)
+  return new Promise(resolve => { //es6 of function (resolve) {
+      setTimeout(() => resolve(`${seconds} delay here!! yay!!`)), seconds*1000)
   });
 }
-
-
- And then what we can do here is instead of passing in this callback function without any arguments,
-  we'll pass in message, and then we'll say console.log message
+//the entire first argument "() => resolve(`${seconds} delay here!! yay!!`))" is callback of setTimeout
+//this time, we passed a value to resolve() - that template string and this will be sent to .then()
 
   delay(1).then(msgString => console.log(msgString));
   delay(3).then(msgString => console.log(msgString))
 
-
+//not surprisingly, .then() expects a value from promiseObj's resolve() this time
 
 
 			delay(2).then(msg => msg.toUpperCase())
