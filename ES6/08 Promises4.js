@@ -7,9 +7,7 @@ A handler may create and return a promise.
 In that case further handlers wait until it settles, and then get its result.
 
                                           new Promise(function(resolve, reject) {
-
                                             setTimeout(() => resolve(1), 1000);
-
                                           }).then(function(result) {
 
                                             alert(result); // 1
@@ -54,5 +52,17 @@ new Promise(function(resolve, reject) {
 
   alert(result); // 4
   return result * 2;
+  
+  
+  
+  
+  
+  To SUMMARIZE:
+  in .then() handler anyway return statement will be there
+  and subsequent .then() receive value from the previous .then
+  
+  but if .then() returns a promise altogether instead of somevalue
+  then the resolved value of that returned promised will be passed on to the next .then() handler!
+    as simple as that!
 
 });
