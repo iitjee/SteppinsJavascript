@@ -53,6 +53,7 @@ new Promise(function(resolve, reject) {
   alert(result); // 4
   return result * 2;
   
+});
   
   
   
@@ -65,4 +66,10 @@ new Promise(function(resolve, reject) {
   then the resolved value of that returned promised will be passed on to the next .then() handler!
     as simple as that!
 
-});
+      
+      understood?
+      try answering this:
+  
+    https://stackoverflow.com/questions/27715275/whats-the-difference-between-returning-value-or-promise-resolve-from-then
+    
+
