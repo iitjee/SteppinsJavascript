@@ -57,6 +57,16 @@ new Promise(function(resolve, reject) {
 The idea is that the result is passed through the chain of .then handlers.
 The whole thing works, because a call to promise.then returns a promise, so that we can call the next .then on it.
 When a handler returns a value, it becomes the result of that promise, so the next .then is called with it.
+
+
+
+
+so answer is 1, 2, 4
+
+
+
+
+
 A classic newbie error: technically we can also add many .then to a single promise. This is not chaining.
 
 let promise = new Promise(function(resolve, reject) {
@@ -79,5 +89,7 @@ promise.then(function(result) {
 });
 
 
-What we did here is just several handlers to one promise. They don’t pass the result to each other, instead they process it independently.
+What we did here is just several handlers to one promise. 
+They don’t pass the result to each other, instead they process it independently.
+so answer is 1, 1, 2
 (read https://javascript.info/promise-chaining )
