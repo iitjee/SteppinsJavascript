@@ -6,6 +6,10 @@ There are four ways to create objects:
 3. Object.create (very raw)
 4. ES6 Classes
 
+ES6, also known as ECMAScript2015, introduced classes.
+
+A class is a type of function, but instead of using the keyword function to initiate it, we use the keyword class, and the properties are 
+assigned inside a constructor() method.
 
 //es6 way
 class Cat {
