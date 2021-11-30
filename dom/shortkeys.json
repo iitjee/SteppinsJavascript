@@ -1,0 +1,59 @@
+[
+  {
+    "sites": "*google.com*\n*youtube.com*",
+    "sitesArray": [
+      "*google.com*",
+      "*youtube.com*"
+    ],
+    "key": "v",
+    "action": "javascript",
+    "code": "// remove any subdomains, e.g. www.example.com -> example.com\nvar tabdomname = window.location.hostname.match(/^(?:.*?\\.)?(\\w{3,}\\.(?:\\w{2,8}|\\w{2,4}\\.\\w{2,4}))$/)[1];\nvar url_string = window.location.href;\n\nif(tabdomname == \"google.com\") {\nvar url = new URL(url_string);\nvar c = url.searchParams.get(\"q\");\nvar youtube = \"https://www.youtube.com/results?search_query=\" + c\nwindow.location.replace(youtube)\n}\n\nif(tabdomname == \"youtube.com\") {\n\nfor (x of document.getElementsByTagName(\"a\"))\nif(x.href.includes(\"channel\")) {window.location.replace(x + \"/videos?view=0&sort=p\")}\n\n\n//document.getElementById(\"tabsContent\").getElementsByTagName(\"tp-yt-paper-tab\")[1].click();\n\n/*\nif(url_string.substring(url_string.lastIndexOf('/') + 1) == \"videos\")  {\nvar mostpopularvids = url_string +\"?view=0&sort=p&flow=grid\"\nwindow.location.replace(mostpopularvids) }\n*/\n\n}\n",
+    "blacklist": "whitelist"
+  },
+  {
+    "key": "a",
+    "action": "javascript",
+    "code": "var url_string = window.location.href\nvar url = new URL(url_string);\nvar c = url.searchParams.get(\"search_query\");\nvar youtube = \"https://www.google.com/search?q=\" + c\n\nwindow.location.replace(youtube)\n",
+    "blacklist": "whitelist",
+    "sites": "*youtube.com*",
+    "sitesArray": [
+      "*youtube.com*"
+    ]
+  },
+  {
+    "key": "c c",
+    "action": "javascript",
+    "code": "url = document.querySelector(\"#text-container .yt-simple-endpoint\").href + '/videos'\nwindow.open(url, '_blank').focus();\n",
+    "blacklist": "whitelist",
+    "sites": "*youtube.com*",
+    "sitesArray": [
+      "*youtube.com*"
+    ]
+  },
+  {
+    "key": "p",
+    "action": "javascript",
+    "blacklist": "whitelist",
+    "sites": "*youtube.com*",
+    "code": "document.querySelector(\".ytd-search-sub-menu-renderer #button\")?.click()\n\ndocument.querySelector(\".style-scope:nth-child(2) > .style-scope:nth-child(6) #label > .style-scope:nth-child(1)\")?.click()\n\n\ndocument.querySelector(\"yt-dropdown-menu.yt-sort-filter-sub-menu-renderer\")?.click()\ndocument.querySelector(\"yt-dropdown-menu.yt-sort-filter-sub-menu-renderer>tp-yt-paper-menu-button>tp-yt-iron-dropdown>div>div>tp-yt-paper-listbox>a:nth-child(1)>tp-yt-paper-item\")?.click()\n",
+    "sitesArray": [
+      "*youtube.com*"
+    ]
+  },
+  {
+    "key": "b",
+    "action": "javascript",
+    "code": " document.querySelector(\"div#top-level-buttons-computed>ytd-button-renderer:nth-child(4)>a>yt-icon-button>button>yt-icon\").click()\n\n\n\n\n\n\n\nfunction myFunktion() {\nmylist = document.querySelectorAll(\"div#playlists>ytd-playlist-add-to-option-renderer\")\nfor (y of mylist) {\n    input = document.getElementById(\"myInput\");\n           \n         filter = input.value.toUpperCase();\n\n        if (y.innerText.toUpperCase().indexOf(filter) > -1) {\n\t            y.style.display= '';\n        } else {\n\t            y.style.display= 'none';\n        }\n    }\n}\n\n\n\n\nsetTimeout(function() {\n\n\ndocument.querySelector(\"ytd-add-to-playlist-renderer.style-scope>div:nth-child(1)>div\").innerHTML = `<input type=\"text\" id=\"myInput\" onkeyup=\"myFunktion()\"  placeholder=\"Search for names..\" title=\"Type in a name\">`;\ndocument.getElementById(\"myInput\").focus();\n\n}, 1500);",
+    "blacklist": "whitelist",
+    "sites": "*youtube.com*",
+    "sitesArray": [
+      "*youtube.com*"
+    ]
+  },
+  {
+    "sites": "",
+    "sitesArray": [
+      ""
+    ]
+  }
+]
