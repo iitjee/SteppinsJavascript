@@ -1,14 +1,101 @@
 [
   {
-    "sites": "*google.com*\n*youtube.com*",
-    "sitesArray": [
-      "*google.com*",
-      "*youtube.com*"
-    ],
-    "key": "v",
+    "code": "document.querySelectorAll('tr #mic-start')[0].click();\ndocument.querySelectorAll('tr #mic-stop')[0].click();",
+    "key": "s",
+    "label": "start mic recorder",
     "action": "javascript",
-    "code": "// remove any subdomains, e.g. www.example.com -> example.com\nvar tabdomname = window.location.hostname.match(/^(?:.*?\\.)?(\\w{3,}\\.(?:\\w{2,8}|\\w{2,4}\\.\\w{2,4}))$/)[1];\nvar url_string = window.location.href;\n\nif(tabdomname == \"google.com\") {\nvar url = new URL(url_string);\nvar c = url.searchParams.get(\"q\");\nvar youtube = \"https://www.youtube.com/results?search_query=\" + c\nwindow.location.replace(youtube)\n}\n\nif(tabdomname == \"youtube.com\") {\n\nfor (x of document.getElementsByTagName(\"a\"))\nif(x.href.includes(\"channel\")) {window.location.replace(x + \"/videos?view=0&sort=p\")}\n\n\n//document.getElementById(\"tabsContent\").getElementsByTagName(\"tp-yt-paper-tab\")[1].click();\n\n/*\nif(url_string.substring(url_string.lastIndexOf('/') + 1) == \"videos\")  {\nvar mostpopularvids = url_string +\"?view=0&sort=p&flow=grid\"\nwindow.location.replace(mostpopularvids) }\n*/\n\n}\n",
-    "blacklist": "whitelist"
+    "sites": "*imclient.herokuapp.com*",
+    "sitesArray": [
+      "*imclient.herokuapp.com*"
+    ]
+  },
+  {
+    "code": "document.getElementById(\"titleVideo\");\nalert(\"cliked\")",
+    "key": "escape",
+    "action": "javascript",
+    "sites": "*null*",
+    "sitesArray": [
+      "*null*"
+    ]
+  },
+  {
+    "code": "document.querySelectorAll('.SDkEP .XDyW0e')[0].click()",
+    "key": "n",
+    "label": "google mic",
+    "action": "javascript",
+    "sites": "*www.google.com*",
+    "sitesArray": [
+      "*www.google.com*"
+    ]
+  },
+  {
+    "code": "document.querySelectorAll('.search-content .form-control')[0].focus()",
+    "key": "escape",
+    "action": "javascript",
+    "sites": "*dopebox.to*",
+    "sitesArray": [
+      "*dopebox.to*"
+    ]
+  },
+  {
+    "code": "document.querySelectorAll('.XrOey > div > a')[0].click()",
+    "key": "h",
+    "label": "home",
+    "action": "javascript",
+    "sites": "*www.instagram.com*",
+    "sitesArray": [
+      "*www.instagram.com*"
+    ]
+  },
+  {
+    "code": "document.querySelectorAll('.r101-headline__studying .r101-headline__prev')[0].click()",
+    "key": "p",
+    "label": "previous video",
+    "action": "javascript",
+    "sites": "*youtube.com*",
+    "sitesArray": [
+      "*youtube.com*"
+    ]
+  },
+  {
+    "code": "document.querySelectorAll('.XrOey > div > a')[0].click()",
+    "key": "h",
+    "label": "home",
+    "action": "javascript",
+    "sites": "*www.instagram.com*",
+    "sitesArray": [
+      "*www.instagram.com*"
+    ]
+  },
+  {
+    "code": "document.querySelectorAll('.J5g42 .xWeGp')[0].click()",
+    "key": "m",
+    "label": "messages",
+    "action": "javascript",
+    "sites": "*www.instagram.com*",
+    "sitesArray": [
+      "*www.instagram.com*"
+    ]
+  },
+  {
+    "code": "document.querySelectorAll('.ytd-search-sub-menu-renderer #button')[0].click();\n\ndocument.querySelectorAll('.style-scope:nth-child(3) > .style-scope:nth-child(6) #label > .style-scope:nth-child(1)')[0].click()",
+    "key": "2",
+    "label": "greater than 20min",
+    "action": "javascript",
+    "sites": "*www.youtube.com*",
+    "sitesArray": [
+      "*www.youtube.com*"
+    ]
+  },
+  {
+    "code": "document.querySelectorAll('.r101-headline__studying .r101-headline__prev')[0].click()",
+    "key": "p",
+    "label": "previous video",
+    "action": "javascript",
+    "sites": "*chineseclass101*",
+    "sitesArray": [
+      "*chineseclass101*"
+    ]
   },
   {
     "key": "a",
@@ -28,32 +115,39 @@
     "sites": "*youtube.com*",
     "sitesArray": [
       "*youtube.com*"
-    ]
+    ],
+    "label": "goto channel from videopage"
   },
   {
-    "key": "p",
+    "key": "m",
     "action": "javascript",
     "blacklist": "whitelist",
     "sites": "*youtube.com*",
     "code": "document.querySelector(\".ytd-search-sub-menu-renderer #button\")?.click()\n\ndocument.querySelector(\".style-scope:nth-child(2) > .style-scope:nth-child(6) #label > .style-scope:nth-child(1)\")?.click()\n\n\ndocument.querySelector(\"yt-dropdown-menu.yt-sort-filter-sub-menu-renderer\")?.click()\ndocument.querySelector(\"yt-dropdown-menu.yt-sort-filter-sub-menu-renderer>tp-yt-paper-menu-button>tp-yt-iron-dropdown>div>div>tp-yt-paper-listbox>a:nth-child(1)>tp-yt-paper-item\")?.click()\n",
     "sitesArray": [
       "*youtube.com*"
-    ]
+    ],
+    "label": "mostviewed inside chanel"
   },
   {
     "key": "b",
     "action": "javascript",
-    "code": " document.querySelector(\"div#top-level-buttons-computed>ytd-button-renderer:nth-child(4)>a>yt-icon-button>button>yt-icon\").click()\n\n\n\n\n\n\n\nfunction myFunktion() {\nmylist = document.querySelectorAll(\"div#playlists>ytd-playlist-add-to-option-renderer\")\nfor (y of mylist) {\n    input = document.getElementById(\"myInput\");\n           \n         filter = input.value.toUpperCase();\n\n        if (y.innerText.toUpperCase().indexOf(filter) > -1) {\n\t            y.style.display= '';\n        } else {\n\t            y.style.display= 'none';\n        }\n    }\n}\n\n\n\n\nsetTimeout(function() {\n\n\ndocument.querySelector(\"ytd-add-to-playlist-renderer.style-scope>div:nth-child(1)>div\").innerHTML = `<input type=\"text\" id=\"myInput\" onkeyup=\"myFunktion()\"  placeholder=\"Search for names..\" title=\"Type in a name\">`;\ndocument.getElementById(\"myInput\").focus();\n\n}, 1500);",
+    "code": " document.querySelector(\"div#top-level-buttons-computed>ytd-button-renderer:nth-child(4)>a>yt-icon-button>button>yt-icon\").click()\n\n\n\n\n\n\n\nfunction myFunktion() {\nmylist = document.querySelectorAll(\"div#playlists>ytd-playlist-add-to-option-renderer\")\nfor (y of mylist) {\n    input = document.getElementById(\"myInput\");\n           \n         filter = input.value.toUpperCase();\n\n        if (y.innerText.toUpperCase().indexOf(filter) > -1) {\n\t            y.style.display= '';\n        } else {\n\t            y.style.display= 'none';\n        }\n    }\n}\n\n\n\n\nsetTimeout(function() {\n\n\ndocument.querySelector(\"ytd-add-to-playlist-renderer.style-scope>div:nth-child(1)>div\").innerHTML = `<input type=\"text\" id=\"myInput\" onkeyup=\"myFunktion()\"  placeholder=\"Search for names..\" title=\"Type in a name\">`;\ndocument.getElementById(\"myInput\").focus();\n\n}, 1200);",
     "blacklist": "whitelist",
     "sites": "*youtube.com*",
     "sitesArray": [
       "*youtube.com*"
-    ]
+    ],
+    "label": "yt add to playlist"
   },
   {
-    "sites": "",
+    "sites": "*google.com*",
     "sitesArray": [
-      ""
-    ]
+      "*google.com*"
+    ],
+    "key": "v",
+    "action": "javascript",
+    "code": "// remove any subdomains, e.g. www.example.com -> example.com\nvar tabdomname = window.location.hostname.match(/^(?:.*?\\.)?(\\w{3,}\\.(?:\\w{2,8}|\\w{2,4}\\.\\w{2,4}))$/)[1];\nvar url_string = window.location.href;\n\nif(tabdomname == \"google.com\") {\nvar url = new URL(url_string);\nvar c = url.searchParams.get(\"q\");\nvar youtube = \"https://www.youtube.com/results?search_query=\" + c\nwindow.location.replace(youtube)\n}\n\nif(tabdomname == \"youtube.com\") {\n\nfor (x of document.getElementsByTagName(\"a\"))\nif(x.href.includes(\"channel\")) {window.location.replace(x + \"/videos?view=0&sort=p\")}\n\n\n//document.getElementById(\"tabsContent\").getElementsByTagName(\"tp-yt-paper-tab\")[1].click();\n\n/*\nif(url_string.substring(url_string.lastIndexOf('/') + 1) == \"videos\")  {\nvar mostpopularvids = url_string +\"?view=0&sort=p&flow=grid\"\nwindow.location.replace(mostpopularvids) }\n*/\n\n}\n",
+    "blacklist": "whitelist"
   }
 ]
